@@ -22,10 +22,10 @@ const Statistics = () => {
                     <Col sm={12} md={6}>
 
 
-                        <div className=' border m-3 w-100 '>
+                        <div className=' border m-3 p-2 w-100 '>
 
 
-                            <Container className="my-5 ">
+                            <Container className="my-5  ">
 
                                 <ResponsiveContainer aspect={1.8}>
 
