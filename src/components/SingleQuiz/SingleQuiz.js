@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-const SingleQuiz = ({ que, idx }) => {
+const SingleQuiz = ({ que, idx, setNoOfWrong, setNoOfCorrect, noOfWrong, noOfCorrect }) => {
     const { question, options, correctAnswer, id } = que;
     let modifiedQuestion = question;
     if (modifiedQuestion.startsWith('<p>')) {
@@ -19,16 +19,28 @@ const SingleQuiz = ({ que, idx }) => {
         // console.log(modifiedQuestion);
     }
 
+
     const handleToGivenAns = (value) => {
+        const correct = noOfCorrect.find(ans => ans === id);
+        const inccorrect = noOfWrong.find(ans => ans === id);
+
         if (value === correctAnswer) {
             toast.success('Correct Answer', {
                 position: toast.POSITION.TOP_CENTER
             });
+            if (!correct && !inccorrect) {
+                setNoOfCorrect([...noOfCorrect, id]);
+            }
         } else {
             toast.error('Wrong Answer !', {
                 position: toast.POSITION.TOP_CENTER
             });
+            if (!correct && !inccorrect) {
+                setNoOfWrong([...noOfWrong, id]);
+            }
         }
+        console.log(noOfWrong);
+        console.log(noOfCorrect);
 
     }
     const showCorrectAnswer = () => {
@@ -50,7 +62,6 @@ const SingleQuiz = ({ que, idx }) => {
                 <div className=' '>
 
                     <button onClick={showCorrectAnswer} className='show-ans w-100 '><FontAwesomeIcon icon={faEye} /></button>
-
                 </div>
             </div>
             <div className='Options'>
