@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import Quiz from './components/Quiz/Quiz';
 
 
 
@@ -30,6 +31,14 @@ function App() {
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/quiz/:quizid',
+          loader: async ({ params }) => {
+            // console.log(params);
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizid}`);
+          },
+          element: <Quiz></Quiz>
         }
 
       ]

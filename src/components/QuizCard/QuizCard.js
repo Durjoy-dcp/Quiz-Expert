@@ -2,9 +2,10 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import './QuizCard.css'
 const QuizCard = ({ quiz }) => {
-    const { logo, name, total } = quiz;
+    const { id, logo, name, total } = quiz;
 
     return (
         <Col sm={12} md={3}>
@@ -15,7 +16,9 @@ const QuizCard = ({ quiz }) => {
                     <Card.Title className="fw-bold">{name}</Card.Title>
                     <div>
                         <p>Total Questions : {total}</p>
-                        <Button className='bg-purple-dark border-0' variant="primary">Start Practice</Button>
+                        <Link to={`/quiz/${id}`}>
+                            <Button className='bg-purple-dark border-0' variant="primary">Start Practice</Button>
+                        </Link>
                     </div>
                 </Card.Body>
             </Card>

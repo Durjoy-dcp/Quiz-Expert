@@ -6,9 +6,9 @@ import QuizCard from '../QuizCard/QuizCard';
 
 const HomePage = () => {
     const apiData = useLoaderData();
-    console.log(apiData);
+    // console.log(apiData);
     const quizs = apiData.data;
-    console.log(quizs);
+    // console.log(quizs);
     return (
         <div>
             <Header></Header>
