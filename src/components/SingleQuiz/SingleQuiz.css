@@ -12,7 +12,8 @@
 }
 
 h5 span,
-h5 p {
+h5 p,
+h5 {
     color: rgba(26, 26, 78, 0.915) !important;
 }
 

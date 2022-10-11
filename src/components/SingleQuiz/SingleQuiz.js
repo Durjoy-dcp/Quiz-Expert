@@ -45,7 +45,7 @@ const SingleQuiz = ({ que, idx }) => {
             <div className='  text-center  d-flex justify-content-between w-100 align-items-center'>
                 <div className='text-center w-100'>
 
-                    <h5 className='text-purple fw-bolder p-3 '>Quiz {idx + 1}:{parse(question)}</h5>
+                    <h5 className=' fw-bolder p-3 '>Quiz {idx + 1}:{parse(question)}</h5>
                 </div>
                 <div className=' '>
 
