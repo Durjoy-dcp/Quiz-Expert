@@ -8,9 +8,9 @@ const QuizCard = ({ quiz }) => {
     const { id, logo, name, total } = quiz;
 
     return (
-        <Col sm={12} md={3}>
+        <Col sm={6} md={3} className="my-2">
 
-            <Card style={{ width: '18rem' }}>
+            <Card >
                 <Card.Img variant="top" src={logo} className="bg-purple" />
                 <Card.Body className="text-purple">
                     <Card.Title className="fw-bold">{name}</Card.Title>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SingleQuiz.css'
 import parse from 'html-react-parser';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -12,9 +12,13 @@ const SingleQuiz = ({ que, idx }) => {
     }
     if (modifiedQuestion.endsWith('</p>')) {
         modifiedQuestion = modifiedQuestion.substring(0, modifiedQuestion.length - 4);
-        console.log(modifiedQuestion);
+        // console.log(modifiedQuestion);
     }
-
+    const [givenAns, setgivenAns] = useState("");
+    const handleToGivenAns = (value) => {
+        setgivenAns(value);
+        console.log(value);
+    }
     const parse = require('html-react-parser');
     return (
         <div className='question m-5 p-4'>
@@ -28,11 +32,9 @@ const SingleQuiz = ({ que, idx }) => {
                 <Container>
                     <Row>
                         {
-                            options.map((option, idx) => <SingleOption key={idx} idx={idx} option={option} id={id} ></SingleOption>)
+                            options.map((option, idx) => <SingleOption handleToGivenAns={handleToGivenAns} key={idx} idx={idx} option={option} id={id} ></SingleOption>)
                         }
-
                     </Row>
-
                 </Container>
 
             </div>
