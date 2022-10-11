@@ -12,7 +12,7 @@ const Header = () => {
                 <Row className="align-items-center justify-content-center px-2">
                     <Col sm={12} md={6}>
                         <div className='text-center'>
-                            <h1 className='text-purple p-3  display-3 fw-bold'>The online quiz maker that's <br /> easy to use, fun and  fully free</h1>
+                            <h1 className='text-purple p-3  display-4 fw-bold'>The  <span className='display-3 fw-bold' style={{ "color": "tomato" }}>Quiz Expert</span>   <br />it is easy to use,  <br />fun and  fully free</h1>
                         </div>
                     </Col>
                     <Col sm={12} md={6}>
