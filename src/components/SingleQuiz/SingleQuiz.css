@@ -15,3 +15,9 @@ h5 span,
 h5 p {
     color: rgba(26, 26, 78, 0.915) !important;
 }
+
+.show-ans {
+    border: none;
+    background-color: white;
+
+}

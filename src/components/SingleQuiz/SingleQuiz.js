@@ -5,7 +5,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import SingleOption from '../SingleOption/SingleOption';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 const SingleQuiz = ({ que, idx }) => {
     const { question, options, correctAnswer, id } = que;
     let modifiedQuestion = question;
@@ -36,8 +37,15 @@ const SingleQuiz = ({ que, idx }) => {
         <div className='question m-5 p-4'>
             <ToastContainer />
 
-            <div className='  text-center '>
-                <h5 className='text-purple fw-bolder p-3 '>Quiz {idx + 1}:{parse(question)}</h5>
+            <div className='  text-center  d-flex justify-content-between w-100 align-items-center'>
+                <div className='text-center w-100'>
+
+                    <h5 className='text-purple fw-bolder p-3 '>Quiz {idx + 1}:{parse(question)}</h5>
+                </div>
+                <div className=' '>
+
+                    <button className='show-ans text-purple w-100 '><FontAwesomeIcon icon={faEye} /></button>
+                </div>
             </div>
             <div className='Options'>
                 <Container>
