@@ -1,15 +1,79 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
+import './Header.css';
 
 const Header = () => {
     return (
-        <div className='d-md-flex p-2 m-5 my-5 align-items-center justify-content-center'>
-            <div className=''>
-                <h1 className='text-purple p-3  fs-1 fw-bold'>The online quiz maker that's <br /> easy to use, fun and <br /> fully free</h1>
-            </div>
-            <div className=' border m-3'>
-                <img className='img-fluid' src="ssquiz.png" alt="" />
-            </div>
+
+        <div>
+            <Container fluid className="my-2 p-4">
+
+                <Row className="align-items-center justify-content-center px-2">
+                    <Col sm={12} md={6}>
+                        <div className='text-center'>
+                            <h1 className='text-purple p-3  display-3 fw-bold'>The online quiz maker that's <br /> easy to use, fun and  fully free</h1>
+                        </div>
+                    </Col>
+                    <Col sm={12} md={6}>
+
+
+                        <div className=' border m-3 w-100 '>
+
+                            <Carousel variant="dark" className="carousel ">
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block  img-fluid"
+                                        src="ssquiz1.png"
+                                        alt="First slide"
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>First slide label</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block img-fluid"
+                                        src="ssquiz2.png"
+                                        alt="Second slide"
+                                    />
+
+                                    <Carousel.Caption>
+                                        <h3>Second slide label</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block  img-fluid"
+                                        src="ssquiz3.png"
+                                        alt="Third slide"
+                                    />
+
+                                    <Carousel.Caption>
+                                        <h3>Third slide label</h3>
+                                        <p>
+                                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                        </p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            </Carousel>
+                        </div>
+
+                    </Col>
+
+
+
+                </Row>
+
+
+
+
+            </Container>
+
         </div>
+
     );
 };
 
