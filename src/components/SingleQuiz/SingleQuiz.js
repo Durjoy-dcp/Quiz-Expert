@@ -3,6 +3,9 @@ import './SingleQuiz.css'
 import parse from 'html-react-parser';
 import { Col, Container, Row } from 'react-bootstrap';
 import SingleOption from '../SingleOption/SingleOption';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const SingleQuiz = ({ que, idx }) => {
     const { question, options, correctAnswer, id } = que;
     let modifiedQuestion = question;
@@ -17,9 +20,13 @@ const SingleQuiz = ({ que, idx }) => {
 
     const handleToGivenAns = (value) => {
         if (value === correctAnswer) {
-            alert("Ans is correct");
+            toast.success('Correct Answer !', {
+                position: toast.POSITION.TOP_CENTER
+            });
         } else {
-            alert("Ans is wrong ");
+            toast.error('Wrong Answer !', {
+                position: toast.POSITION.TOP_CENTER
+            });
         }
 
     }
@@ -27,8 +34,7 @@ const SingleQuiz = ({ que, idx }) => {
     const parse = require('html-react-parser');
     return (
         <div className='question m-5 p-4'>
-
-
+            <ToastContainer />
 
             <div className='  text-center '>
                 <h5 className='text-purple fw-bolder p-3 '>Quiz {idx + 1}:{parse(question)}</h5>

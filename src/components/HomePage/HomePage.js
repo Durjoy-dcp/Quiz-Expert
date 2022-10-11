@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, ToastContainer } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import Header from '../Header/Header';
 import QuizCard from '../QuizCard/QuizCard';
@@ -14,6 +14,7 @@ const HomePage = () => {
             <Header></Header>
 
             <Container>
+
                 <Row className='my-5'>
                     {
                         quizs.map(quiz => <QuizCard key={quiz.id} quiz={quiz}></QuizCard>)
