@@ -8,6 +8,7 @@ import HomePage from './components/HomePage/HomePage';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Quiz from './components/Quiz/Quiz';
+import ErrorPage from './ErrorPage';
 
 
 
@@ -46,8 +47,12 @@ function App() {
         }
 
       ]
-    }
+    },
 
+    {
+      path: '/*',
+      element: <ErrorPage></ErrorPage>
+    }
 
   ])
   return (
