@@ -1,11 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CommonNavbar from './components/CommonNavbar/CommonNavbar';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Main from './Layout/Main';
+import Header from './components/Header/Header';
+import HomePage from './components/HomePage/HomePage';
+import Statistics from './components/Statistics/Statistics';
+import Blog from './components/Blog/Blog';
+
+
 
 function App() {
+  const router = createBrowserRouter([
+
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: '/',
+          element: <HomePage></HomePage>
+        }, {
+          path: '/statistics',
+          element: <Statistics></Statistics>
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
+        }
+
+      ]
+    }
+
+
+  ])
   return (
     <div className="App">
-      <h1>This is a home page </h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
