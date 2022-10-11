@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SingleQuiz.css'
 import parse from 'html-react-parser';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -14,11 +14,16 @@ const SingleQuiz = ({ que, idx }) => {
         modifiedQuestion = modifiedQuestion.substring(0, modifiedQuestion.length - 4);
         // console.log(modifiedQuestion);
     }
-    const [givenAns, setgivenAns] = useState("");
+
     const handleToGivenAns = (value) => {
-        setgivenAns(value);
-        console.log(value);
+        if (value === correctAnswer) {
+            alert("Ans is correct");
+        } else {
+            alert("Ans is wrong ");
+        }
+
     }
+
     const parse = require('html-react-parser');
     return (
         <div className='question m-5 p-4'>
