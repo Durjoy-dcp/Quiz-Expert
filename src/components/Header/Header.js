@@ -28,8 +28,8 @@ const Header = () => {
                                         alt="First slide"
                                     />
                                     <Carousel.Caption>
-                                        <h3>First slide label</h3>
-                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                        <h3 className=' fw-bold bg-danger'>You can Explore Quiz</h3>
+
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item>
@@ -39,9 +39,9 @@ const Header = () => {
                                         alt="Second slide"
                                     />
 
-                                    <Carousel.Caption>
-                                        <h3>Second slide label</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <Carousel.Caption >
+
+                                        <h3 className=' fw-bold bg-danger'>Every Quiz Have Cool Feature</h3>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item>
@@ -52,10 +52,32 @@ const Header = () => {
                                     />
 
                                     <Carousel.Caption>
-                                        <h3>Third slide label</h3>
-                                        <p>
-                                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                        </p>
+                                        <h3 className=' fw-bold bg-danger'>Explore Analytical Data</h3>
+
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block  img-fluid"
+                                        src="ssquiz4.png"
+                                        alt="Four slide"
+                                    />
+
+                                    <Carousel.Caption>
+
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block  img-fluid"
+                                        src="ssquiz5.png"
+                                        alt="Five slide"
+                                    />
+
+                                    <Carousel.Caption>
+                                        <h3 className=' fw-bold bg-danger'>Explore some FAQ </h3>
+
+
                                     </Carousel.Caption>
                                 </Carousel.Item>
                             </Carousel>
