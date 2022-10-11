@@ -49,7 +49,7 @@ const SingleQuiz = ({ que, idx }) => {
                 </div>
                 <div className=' '>
 
-                    <button onClick={showCorrectAnswer} className='show-ans text-purple w-100 '><FontAwesomeIcon icon={faEye} /></button>
+                    <button onClick={showCorrectAnswer} className='show-ans w-100 '><FontAwesomeIcon icon={faEye} /></button>
 
                 </div>
             </div>

@@ -16,13 +16,13 @@ const Statistics = () => {
                 <Row className="align-items-center justify-content-center px-2">
                     <Col sm={12} md={6}>
                         <div className='text-center'>
-                            <h1 className='text-purple p-3   fw-bold'>This  <span className=' fw-bold' style={{ "color": "tomato" }}>chart</span> is showing a analytical information of the <br />total number of the questions have seperately according to the topics</h1>
+                            <h1 className='text-purple p-3   fw-bold'>This  <span className=' fw-bold text-warning' >chart</span> is showing a analytical information of the <br />total number of the questions have seperately according to the topics</h1>
                         </div>
                     </Col>
                     <Col sm={12} md={6}>
 
 
-                        <div className=' border m-3 p-2 w-100 '>
+                        <div className=' border border-1 border-danger shadow-lg m-3 p-2 w-100 bg-white rounded '>
 
 
                             <Container className="my-5  ">

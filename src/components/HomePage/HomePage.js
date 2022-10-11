@@ -14,7 +14,7 @@ const HomePage = () => {
             <Header></Header>
 
             <Container>
-
+                <h1 className='text-white fw-bold text-center'>Choose topic to play Quiz</h1>
                 <Row className='my-5'>
                     {
                         quizs.map(quiz => <QuizCard key={quiz.id} quiz={quiz}></QuizCard>)

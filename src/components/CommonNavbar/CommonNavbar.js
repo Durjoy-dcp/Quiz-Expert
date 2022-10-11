@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 const CommonNavbar = () => {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" className='fw-bold'>
             <Container>
                 <Navbar.Brand> <Link to="/" className='navbar-brand'>Quiz Expert</Link></Navbar.Brand>
                 <Nav className="ms-auto">

@@ -11,7 +11,7 @@ const Quiz = () => {
     return (
         <Container>
             <div className="text-center text-purple my-5">
-                <h1 className='fw-bold'>Quiz of {name}</h1>
+                <h1 className='fw-bold'>Quiz of <span className='text-info'>{name}</span> </h1>
             </div>
             <div>
                 {
