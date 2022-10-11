@@ -7,7 +7,7 @@ const CommonNavbar = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Quiz Expert</Navbar.Brand>
+                <Navbar.Brand href="/">Quiz Expert</Navbar.Brand>
                 <Nav className="ms-auto">
                     <Link className='nav-link' to="/">Home</Link>
                     <Link className='nav-link' to="/statistics">Statistics</Link>
