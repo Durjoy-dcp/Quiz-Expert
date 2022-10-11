@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import './QuizCard.css'
+import './QuizCard.css';
 const QuizCard = ({ quiz }) => {
     const { id, logo, name, total } = quiz;
 
