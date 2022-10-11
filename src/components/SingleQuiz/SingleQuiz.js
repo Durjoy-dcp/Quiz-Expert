@@ -3,7 +3,7 @@ import './SingleQuiz.css'
 import parse from 'html-react-parser';
 import { Col, Container, Row } from 'react-bootstrap';
 import SingleOption from '../SingleOption/SingleOption';
-const SingleQuiz = ({ que }) => {
+const SingleQuiz = ({ que, idx }) => {
     const { question, options, correctAnswer, id } = que;
     let modifiedQuestion = question;
     if (modifiedQuestion.startsWith('<p>')) {
@@ -22,7 +22,7 @@ const SingleQuiz = ({ que }) => {
 
 
             <div className='  text-center '>
-                <h5 className='text-purple '>{parse(question)}</h5>
+                <h5 className='text-purple fw-bolder p-3 '>Quiz {idx + 1}:{parse(question)}</h5>
             </div>
             <div className='Options'>
                 <Container>

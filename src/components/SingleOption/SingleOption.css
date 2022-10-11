@@ -5,6 +5,12 @@
 
 }
 
+.option:hover {
+    background-color: rgba(114, 209, 235, 0.333);
+
+
+}
+
 .hideradio {
     display: none;
 
