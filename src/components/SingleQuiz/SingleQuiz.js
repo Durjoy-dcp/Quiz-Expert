@@ -21,7 +21,7 @@ const SingleQuiz = ({ que, idx }) => {
 
     const handleToGivenAns = (value) => {
         if (value === correctAnswer) {
-            toast.success('Correct Answer !', {
+            toast.success('Correct Answer', {
                 position: toast.POSITION.TOP_CENTER
             });
         } else {
@@ -30,6 +30,11 @@ const SingleQuiz = ({ que, idx }) => {
             });
         }
 
+    }
+    const showCorrectAnswer = () => {
+        toast.success(`Correct Ans : ${correctAnswer}`, {
+            position: toast.POSITION.TOP_CENTER
+        });
     }
 
     const parse = require('html-react-parser');
@@ -44,7 +49,8 @@ const SingleQuiz = ({ que, idx }) => {
                 </div>
                 <div className=' '>
 
-                    <button className='show-ans text-purple w-100 '><FontAwesomeIcon icon={faEye} /></button>
+                    <button onClick={showCorrectAnswer} className='show-ans text-purple w-100 '><FontAwesomeIcon icon={faEye} /></button>
+
                 </div>
             </div>
             <div className='Options'>
