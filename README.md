@@ -1,70 +1,50 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Quiz Expert 
 
-## Available Scripts
+This is a demo project which have some functionality to play quiz according to
+the topics.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This SPA is created based on React .
 
-### `npm test`
+- React Router 
+- Bootstrap 
+- NPM 
+- CRA
+- HTML React Parser
+- Github 
+- Netlify to deploy the app 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## External Elements Used 
+- Fontawesome
+- Recharts
+- React-Toastify 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
+- User can explore quiz according to interest on the app.
+- This app Load data From API and use React Router to navigate.So, Among views of various components in this application,React Router allows changing the browser URL, and keeps the UI in sync with the URL.
+- The app fetch  data with the help of React Router Loader. It is easy to implement.
+- This app used Recharts to show the analytical information about the quiz .
+- User can see the correct answer ,judge the selected answer to check correct or wrong .
+- This app shows the total number of correct and wrong answer 
+- This app provide some FAQ based on the Web development in the 'Blog' menu in the navbar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Some interesting approach
+- First of all , questions which are fetching from API were not in  the text format by default. 
+    Example: 
+    ### `<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">How would you set a purple background color to an element?</span></p>`
+    To solve this ,here  used HTML React Parser and some css to get the actual 
+    format of text .
+    Output :
+    ### `How would you set a purple background color to an element? `
+- To show the total number of correct and wrong answered questions in the perfect postion,I used 'fixed' position
+    for the 'md' devices . For the 'sm' or 'xs'  devices used some tricks of d-none ,d-block.
+- Also used many interesting and cool things of Bootstrap here .Example : Carousel, Accordion
+    etc.
+## How to use
+Live website : https://splendid-entremet-f84b90.netlify.app/

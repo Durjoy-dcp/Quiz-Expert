@@ -9,6 +9,7 @@ import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Quiz from './components/Quiz/Quiz';
 import ErrorPage from './ErrorPage';
+import Topics from './components/Topics/Topics';
 
 
 
@@ -25,7 +26,15 @@ function App() {
           loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           }
-        }, {
+        },
+        {
+          path: '/topics',
+          element: <Topics></Topics>,
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          }
+        },
+        {
           path: '/statistics',
           element: <Statistics></Statistics>,
           loader: async () => {
